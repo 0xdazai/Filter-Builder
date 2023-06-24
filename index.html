@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hashbot Helper</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    #main-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #input-section, #output-section {
+        width: 45%;
+        padding: 2%;
+    }
+
+    textarea {
+        width: 100%;
+        height: 500px; /* Adjust the height here */
+        margin-bottom: 20px;
+    }
+
+    .button-copy {
+        vertical-align: middle;
+    }
+
+    .command-text {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <h1>Hashbot Helper</h1>
+        <div id="main-content">
+            <div id="input-section">
+                <textarea id="general-terms">help
+support
+admin
+giveaway
+airdrop
+official
+free
+verification
+mod
+team
+announcement
+deskline
+developer
+staff
+</textarea>
+                <textarea id="staff-members" placeholder="Staff Members"></textarea>
+                <button id="run-button">Run</button>
+            </div>
+            <div id="output-section">
+                <input type="checkbox" id="phrase-check"> Phrase
+                <input type="checkbox" id="regex-check"> Regex
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

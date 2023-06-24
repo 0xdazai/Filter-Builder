@@ -13,7 +13,9 @@ Phrase and Regex (short for regular expression) are two different methods of pat
 Enter your terms: Populate the text boxes with general words or phrases you want to filter out, and team member names you want to protect from impersonation.
 
 **Select pattern type:** Choose the type of pattern matching (Phrase, Regex, or both) that you want to use.
+
 **Generate commands:** Click the "Run" button to generate a list of commands.
+
 **Apply commands:** Copy the generated commands to your clipboard and paste into your Discord server to set up your filters with Hashbot.
 
 Filter Builder is specifically designed to work with Hashbot and aims to augment the bot's existing capabilities.

@@ -34,7 +34,7 @@ function copyToClipboard(text, buttonId) {
     document.body.removeChild(tempInput);
 
     var buttonElement = document.getElementById(buttonId);
-    buttonElement.className += ' button-copy-copied';
+    buttonElement.classList.add('button-copy-copied');
 
     var copiedCommands = JSON.parse(localStorage.getItem('copiedCommands')) || [];
     copiedCommands.push(text);

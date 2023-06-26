@@ -31,4 +31,23 @@ function copyToClipboard(btn) {
     document.body.removeChild(tempInput);
 
     // Mark this command as copied by changing the text color
-    var commandTexts = document.getElementsByClassName("command-text
+    var commandTexts = document.getElementsByClassName("command-text");
+    for (var i = 0; i < commandTexts.length; i++) {
+        if (commandTexts[i].textContent.includes(command)) {
+            commandTexts[i].classList.add('copied-text');
+            // Store in localStorage
+            localStorage.setItem(command, 'copied');
+        }
+    }
+}
+
+// On page load, check localStorage for copied commands
+window.onload = function() {
+    var commandTexts = document.getElementsByClassName("command-text");
+    for (var i = 0; i < commandTexts.length; i++) {
+        var command = commandTexts[i].textContent.split('- ')[1];
+        if (localStorage.getItem(command) === 'copied') {
+            commandTexts[i].classList.add('copied-text');
+        }
+    }
+}
